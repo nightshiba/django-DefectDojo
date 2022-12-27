@@ -45,6 +45,14 @@
                     </div>
                 {% endif %}
 
+                {% if SEZNAM_ENABLED is True %}
+                    <div class="col-sm-offset-1 col-sm-2">
+                        <button class="btn btn-success" type="button">
+                            <a href="{% url 'social:begin' 'seznam-oauth2' %}?next={{ request.GET.next }}" style="color: rgb(255,255,255)">Login with Seznam</a>
+                        </button>
+                    </div>
+                {% endif %}
+
                 {% if OKTA_ENABLED is True %}
                     <div class="col-sm-offset-1 col-sm-2">
                         <button class="btn btn-success" type="button">

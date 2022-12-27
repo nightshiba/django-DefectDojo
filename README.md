@@ -1,5 +1,11 @@
 # DefectDojo
 
+## TEST
+```sh
+sudo docker-compose --profile postgres-redis --env-file ./docker/environments/postgres-redis.env build --no-cache 
+sudo docker-compose --profile postgres-redis --env-file ./docker/environments/postgres-redis.env up --no-deps -d 
+```
+
 <table>
   <tr styl="margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%);">
     <th><a href="https://opensourcesecurityindex.io/" target="_blank" rel="noopener">

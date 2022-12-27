@@ -86,6 +86,7 @@ def api_v2_key(request):
 def login_view(request):
     if not settings.SHOW_LOGIN_FORM and settings.SOCIAL_LOGIN_AUTO_REDIRECT and sum([
         settings.GOOGLE_OAUTH_ENABLED,
+        settings.SEZNAM_OAUTH2_ENABLED,
         settings.OKTA_OAUTH_ENABLED,
         settings.AZUREAD_TENANT_OAUTH2_ENABLED,
         settings.GITLAB_OAUTH2_ENABLED,
@@ -97,6 +98,8 @@ def login_view(request):
     ]) == 1 and not ('force_login_form' in request.GET):
         if settings.GOOGLE_OAUTH_ENABLED:
             social_auth = 'google-oauth2'
+        elif settings.SEZNAM_OAUTH_ENABLED:
+            social_auth = 'seznam-oauth2'
         elif settings.OKTA_OAUTH_ENABLED:
             social_auth = 'okta-oauth2'
         elif settings.AZUREAD_TENANT_OAUTH2_ENABLED:

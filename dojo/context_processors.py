@@ -9,6 +9,7 @@ def globalize_vars(request):
             'CLASSIC_AUTH_ENABLED': settings.CLASSIC_AUTH_ENABLED,
             'AUTH0_ENABLED': settings.AUTH0_OAUTH2_ENABLED,
             'GOOGLE_ENABLED': settings.GOOGLE_OAUTH_ENABLED,
+            'SEZNAM_ENABLED': settings.SEZNAM_OAUTH_ENABLED,
             'OKTA_ENABLED': settings.OKTA_OAUTH_ENABLED,
             'GITLAB_ENABLED': settings.GITLAB_OAUTH2_ENABLED,
             'AZUREAD_TENANT_OAUTH2_ENABLED': settings.AZUREAD_TENANT_OAUTH2_ENABLED,
